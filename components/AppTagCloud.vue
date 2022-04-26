@@ -113,7 +113,7 @@ ul.cloud {
 
 ul.cloud a {
   --size: 4;
-  --color: #a33;
+  --color: #ff9e64;
   color: var(--color);
   font-size: calc(var(--size) * 0.25rem + 0.5rem);
   display: block;
@@ -157,13 +157,13 @@ ul[data-show-value] a::after {
 }
 
 ul.cloud li:nth-child(2n + 1) a {
-  --color: #181;
+  --color: #9ece6a;
 }
 ul.cloud li:nth-child(3n + 1) a {
-  --color: #33a;
+  --color: #7aa2f7;
 }
 ul.cloud li:nth-child(4n + 1) a {
-  --color: #c38;
+  --color: #f7768e;
 }
 
 ul.cloud a:focus {

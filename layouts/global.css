@@ -7,12 +7,9 @@ body {
   color: #cfc9c2;
 }
 
-.card {
-  max-width: 600px;
-  /* margin: 0 auto; */
-  font-size: 20px;
-  margin: 45px auto;
-  background: #24283b;
-  padding: 25px;
-  border-radius: 0.5em;
+
+
+
+.text-pink {
+  color: #f7768e;
 }

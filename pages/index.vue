@@ -1,6 +1,5 @@
 <template>
   <div>
-    <app-short-summary></app-short-summary>
     <app-tag-cloud></app-tag-cloud>
   </div>
 </template>
