@@ -1,11 +1,14 @@
 <template>
-  <div class="app-tag-cloud card">
-    <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
-      <li v-for="(item, index) in tagsArr" :key="index">
-        <a href="#" :data-weight="item.weight">{{ item.name }}</a>
-      </li>
-    </ul>
-  </div>
+  <app-card>
+    <div>My skills</div>
+    <div class="app-tag-cloud">
+      <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
+        <li v-for="(item, index) in tagsArr" :key="index">
+          <span :data-weight="item.weight">{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </app-card>
 </template>
 
 <script>
@@ -52,20 +55,20 @@ export default {
           weight: 6,
         },
         {
-          name: "Ajax",
-          weight: 10,
+          name: "TypeScript",
+          weight: 6,
         },
         {
           name: "Vue",
           weight: 9,
         },
         {
-          name: "Vuex",
-          weight: 8,
+          name: "Ajax",
+          weight: 10,
         },
         {
-          name: "TypeScript",
-          weight: 6,
+          name: "Vuex",
+          weight: 8,
         },
         {
           name: "docker",
@@ -111,7 +114,7 @@ ul.cloud {
   width: 450px;
 }
 
-ul.cloud a {
+ul.cloud span {
   --size: 4;
   --color: #ff9e64;
   color: var(--color);
@@ -123,54 +126,54 @@ ul.cloud a {
   transition: all 0.25s;
 }
 
-ul.cloud a[data-weight="1"] {
+ul.cloud span[data-weight="1"] {
   --size: 1;
 }
-ul.cloud a[data-weight="2"] {
+ul.cloud span[data-weight="2"] {
   --size: 2;
 }
-ul.cloud a[data-weight="3"] {
+ul.cloud span[data-weight="3"] {
   --size: 3;
 }
-ul.cloud a[data-weight="4"] {
+ul.cloud span[data-weight="4"] {
   --size: 4;
 }
-ul.cloud a[data-weight="5"] {
+ul.cloud span[data-weight="5"] {
   --size: 6;
 }
-ul.cloud a[data-weight="6"] {
+ul.cloud span[data-weight="6"] {
   --size: 8;
 }
-ul.cloud a[data-weight="7"] {
+ul.cloud span[data-weight="7"] {
   --size: 10;
 }
-ul.cloud a[data-weight="8"] {
+ul.cloud span[data-weight="8"] {
   --size: 13;
 }
-ul.cloud a[data-weight="9"] {
+ul.cloud span[data-weight="9"] {
   --size: 16;
 }
 
-ul[data-show-value] a::after {
+ul[data-show-value] span::after {
   content: " (" attr(data-weight) ")";
   font-size: 1rem;
 }
 
-ul.cloud li:nth-child(2n + 1) a {
+ul.cloud li:nth-child(2n + 1) span {
   --color: #9ece6a;
 }
-ul.cloud li:nth-child(3n + 1) a {
+ul.cloud li:nth-child(3n + 1) span {
   --color: #7aa2f7;
 }
-ul.cloud li:nth-child(4n + 1) a {
+ul.cloud li:nth-child(4n + 1) span {
   --color: #f7768e;
 }
 
-ul.cloud a:focus {
+ul.cloud span:focus {
   outline: 1px dashed;
 }
 
-ul.cloud a::before {
+ul.cloud span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -183,7 +186,7 @@ ul.cloud a::before {
   transition: all 0.25s;
 }
 
-ul.cloud a:hover {
+ul.cloud span:hover {
   scale: 1.3;
   z-index: 10;
   /* font-size: 25px; */

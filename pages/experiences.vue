@@ -1,8 +1,7 @@
 <template>
   <div class="experiences">
     <app-card>
-      Hello, my name is Cyrill. I'm a
-      <span class="text-pink">passionate</span> Front-end developer with
+      I'm a Front-end developer with
       experience in building web applications and websites. <br />
       I specialize in JavaScript/TypeScript and Vue.js (2 and 3). Also have a
       bit of experience in react.js, php and node.js.
