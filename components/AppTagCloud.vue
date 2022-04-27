@@ -1,6 +1,6 @@
 <template>
-  <app-card>
-    <div>My skills</div>
+  <!-- <app-card> -->
+  <div>
     <div class="app-tag-cloud">
       <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
         <li v-for="(item, index) in tagsArr" :key="index">
@@ -8,7 +8,8 @@
         </li>
       </ul>
     </div>
-  </app-card>
+  </div>
+  <!-- </app-card> -->
 </template>
 
 <script>
@@ -46,6 +47,7 @@ export default {
           name: "Jest",
           weight: 2,
         },
+
         {
           name: "Socket.io",
           weight: 3,
@@ -90,6 +92,10 @@ export default {
           name: "Vue-router",
           weight: 6,
         },
+        {
+          name: "Nuxt.js",
+          weight: 6,
+        },
       ],
     };
   },
@@ -124,6 +130,7 @@ ul.cloud span {
   position: relative;
   text-decoration: none;
   transition: all 0.25s;
+  cursor: pointer;
 }
 
 ul.cloud span[data-weight="1"] {
@@ -183,14 +190,14 @@ ul.cloud span::before {
   background: var(--color);
   transform: translate(-50%, 0);
   opacity: 0.15;
-  transition: all 0.25s;
+  transition: ease-in-out 0.25s;
 }
 
-ul.cloud span:hover {
-  scale: 1.3;
-  z-index: 10;
+.cloud span:hover {
+  transform: scale(1.1);
+  z-index: 200;
   /* font-size: 25px; */
-  transition: all 0.25s;
+  transition: ease-in-out 0.25s;
 }
 
 @media (prefers-reduced-motion) {

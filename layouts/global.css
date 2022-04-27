@@ -7,9 +7,7 @@ body {
   color: #cfc9c2;
   background-image: radial-gradient(
     circle at center,
-
-    /* #24283b,
-    #1a1b26 */ #460b60,
+    #460b60,
     #290638,
     #15032a,
     #0f0021
@@ -23,7 +21,6 @@ body {
 
   filter: blur(0.3px);
   animation: glow 2.5s linear infinite;
-
 }
 
 @keyframes glow {
